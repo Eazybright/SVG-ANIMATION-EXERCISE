@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SVG Animation</title>
+    <link type="text/css" rel="stylesheet" href="./headphone.css"/>
+  </head>
+  <body>
+    <svg class="mute is-active" viewBox="0 0 100 100">
+      <g class="mute__headphones">
+        <path d="M92.6,50.075C92.213,26.775 73.25,7.938 50,7.938C26.75,7.938 7.775,26.775 7.388,50.075C3.112,51.363 -0.013,55.425 -0.013,60.25L-0.013,72.7C-0.013,78.55 4.575,83.3 10.238,83.3L18.363,83.3L18.363,51.6C18.4,51.338 18.438,51.075 18.438,50.813C18.438,33.275 32.6,19 50,19C67.4,19 81.563,33.275 81.563,50.813C81.563,51.088 81.6,51.338 81.638,51.6L81.638,83.313L89.763,83.313C95.413,83.313 100.013,78.563 100.013,72.713L100.013,60.263C100,55.438 96.875,51.362 92.6,50.075Z" />
+        <path d="M70.538,54.088L70.538,79.588C70.538,81.625 72.188,83.275 74.225,83.275L74.225,83.325L78.662,83.325L78.662,50.4L74.225,50.4C72.213,50.4 70.538,52.063 70.538,54.088Z" />
+        <path d="M25.75,50.4L21.313,50.4L21.313,83.325L25.75,83.325L25.75,83.275C27.788,83.275 29.438,81.625 29.438,79.588L29.438,54.088C29.45,52.063 27.775,50.4 25.75,50.4Z" />
+      </g>
+      <line x1="12" y1="12" x2="88" y2="88" class="mute__strikethrough" />
+    </svg>
+  </body>
+  <script type="text/javascript">
+    const muteButton = document.querySelector(".mute");
+    muteButton.addEventListener("click", () => {
+      muteButton.classList.toggle("is-active");
+    });
+  </script>
+</html>

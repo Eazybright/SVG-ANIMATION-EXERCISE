@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  height: 100vh;
+}
+
+.mute {
+  fill: white;
+  width: 170px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.mute__headphones {
+  transform-origin: center;
+  transform: scale(0.9);
+}
+
+.is-active .mute__headphones {
+  animation: pulse 2s infinite;
+}
+
+.mute__strikethrough {
+  stroke: red;
+  opacity: 0.8;
+  stroke-width: 12px;
+}
+
+.is-active .mute__strikethrough {
+  opacity: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  40% {
+    transform: scale(1) rotate(5deg);
+  }
+  80% {
+    transform: scale(1) rotate(-5deg);
+  }
+  100% {
+    transform: scale(0.9) rotate(0);
+  }
+}

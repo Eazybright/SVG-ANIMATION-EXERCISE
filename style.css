@@ -1,0 +1,56 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+svg {
+  max-width: 50vw;
+  max-height: 80vh;
+}
+
+.circle-spot {
+  fill: #204ecf;
+  transition: fill 0.5s;
+}
+
+.circle-spot:hover {
+  fill: #03cc83;
+}
+
+@keyframes move-around {
+  0% {
+    transform: translate(-40%, -35%);
+  }
+
+  25% {
+    transform: translate(40%, -35%);
+  }
+
+  50% {
+    transform: translate(40%, 35%);
+  }
+
+  75% {
+    transform: translate(-40%, 35%);
+  }
+
+  100% {
+    transform: translate(-40%, -35%);
+  }
+}
+
+.rectangle-background {
+  fill: #03cc83;
+}
+
+.cross {
+  animation: move-around 5s infinite;
+  stroke: #262d3d;
+  stroke-width: 10px;
+}

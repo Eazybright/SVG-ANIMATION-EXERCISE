@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  height: 100vh;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 62px;
+  height: 62px;
+  cursor: pointer;
+}
+
+.hamburger__bar {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transform-origin: center;
+  stroke: white;
+  stroke-width: 10%;
+}
+
+.hamburger__bar--top {
+  transform: translateY(-40%);
+}
+
+.hamburger__bar--bot {
+  transform: translateY(40%);
+}
+
+.is-opened .hamburger__bar--top {
+  transform: rotate(45deg);
+}
+
+.is-opened .hamburger__bar--mid {
+  transform: scaleX(0.1);
+}
+
+.is-opened .hamburger__bar--bot {
+  transform: rotate(-45deg);
+}
